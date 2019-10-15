@@ -7,7 +7,13 @@ public class EnemyController : MonoBehaviour
     public int damage = 1;
     public float speed;
 
+    private Shake shake;
     public GameObject effect;
+
+    private void Start()
+    {
+        shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -17,7 +23,7 @@ public class EnemyController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player")) {
-
+            shake.CamShake();
             Instantiate(effect, transform.position, Quaternion.identity);
 
             other.GetComponent<PlayerController>().health -= damage;
