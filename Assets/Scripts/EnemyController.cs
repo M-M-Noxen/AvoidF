@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour
     public int damage = 1;
     public float speed;
 
+    public GameObject effect;
     // Update is called once per frame
     void Update()
     {
@@ -16,6 +17,9 @@ public class EnemyController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player")) {
+
+            Instantiate(effect, transform.position, Quaternion.identity);
+
             other.GetComponent<PlayerController>().health -= damage;
             Debug.Log(other.GetComponent<PlayerController>().health);
             Destroy(gameObject);
