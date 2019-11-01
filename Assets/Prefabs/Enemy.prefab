@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5495527130300105036}
   - component: {fileID: 1535341286064979031}
   - component: {fileID: 3461752426963582737}
-  - component: {fileID: 6749304685537460604}
+  - component: {fileID: -6423434508385975343}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -118,7 +118,7 @@ MonoBehaviour:
   damage: 1
   speed: 10
   effect: {fileID: 2974675204595083442, guid: 263a78c49e7be4a4187da46015f40e61, type: 3}
---- !u!60 &6749304685537460604
+--- !u!60 &-6423434508385975343
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,7 +147,6 @@ PolygonCollider2D:
       - {x: -0.4966732, y: -1.4403522}
       - {x: -0.5077104, y: -0.68982387}
       - {x: -0.4966732, y: -0.6787867}
-      - {x: -0.48738194, y: -0.13163456}
       - {x: -0.08829746, y: -0.1269276}
       - {x: -0.04414873, y: -0.11589041}
       - {x: 0.2538552, y: -0.10485323}
